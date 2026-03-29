@@ -1,0 +1,43 @@
+#include <iostream>
+#include <Windows.h>
+
+namespace sum {
+    int calc(int x, int y) {
+        return x + y;
+    }
+}
+
+namespace diff {
+    int calc(int x, int y) {
+        return x - y;
+    }
+}
+
+namespace mult {
+    int calc(int x, int y) {
+        return x * y;
+    }
+}
+
+namespace divi {
+    int calc(int x, int y) {
+        return x / y;
+    }
+}
+
+int main() {
+
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    int x = 6, y = 9;
+
+    std::cout << "x = " << x << ", y = " << y << std::endl;
+
+    std::cout << "Сложение: " << sum::calc(x, y) << std::endl;
+    std::cout << "Вычитание: " << diff::calc(x, y) << std::endl;
+    std::cout << "Умножение: " << mult::calc(x, y) << std::endl;
+    std::cout << "Деление: " << divi::calc(x, y) << std::endl;
+
+    return 0;
+}
